@@ -1,6 +1,7 @@
 import 'package:bookly_app/Features/home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/featured_list_view.dart';
 import 'package:bookly_app/core/utils/styles.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'best_seller_list_view.dart';
@@ -31,17 +32,15 @@ class HomeViewBody extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30.0),
-                child: BestSellerListView(),
-              ),
             ],
           ),
         ),
         SliverFillRemaining(
-          // to not be forced to make the shrink wrap true in order to use list view inside custom scroll view
-          child: BestSellerListView(),
-        )
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 30.0),
+            child: BestSellerListView(),
+          ),
+        ),
       ],
     );
   }
