@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'custom_book_item.dart';
+import 'custom_book_image.dart';
 
 class SimilarBooksListView extends StatelessWidget {
   const SimilarBooksListView({super.key});
@@ -14,7 +14,10 @@ class SimilarBooksListView extends StatelessWidget {
           itemBuilder: (context, index) {
             return const Padding(
               padding: EdgeInsets.symmetric(horizontal: 5.0),
-              child: CustomBookImage(),
+              child: CustomBookImage(
+                imageUrl:
+                    'https://cdn.britannica.com/91/102791-050-DEBB58AC/Karl-Marx.jpg',
+              ),
             );
           }),
     );

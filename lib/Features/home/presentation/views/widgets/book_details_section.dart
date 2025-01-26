@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../../core/utils/styles.dart';
 import 'book_rating.dart';
 import 'books_action.dart';
-import 'custom_book_item.dart';
+import 'custom_book_image.dart';
 
 class BookDetailsSection extends StatelessWidget {
   const BookDetailsSection({super.key});
@@ -16,7 +16,10 @@ class BookDetailsSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * .2),
-          child: const CustomBookImage(),
+          child: const CustomBookImage(
+            imageUrl:
+                'https://cdn.britannica.com/91/102791-050-DEBB58AC/Karl-Marx.jpg',
+          ),
         ),
         const SizedBox(
           height: 43,
