@@ -6,4 +6,6 @@ abstract class HomeRepo {
   Future<Either<Failure, List<BookModel>>>
       fetchNewestBooks(); //the value on the left is the problem, the value on the right is the right type to be returned
   Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks();
+  Future<Either<Failure, List<BookModel>>> fetchSimilarBooks(
+      {required String category});
 }
